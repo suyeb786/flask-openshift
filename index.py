@@ -1,5 +1,6 @@
 from flask import Flask
 #from flask_api import status
+from os import environ
 app = Flask(__name__)
 
 @app.route("/")
@@ -13,6 +14,11 @@ def hello():
 @app.route('/hello/<name>')
 def name(name):
     return "Hello "+name
+    
+
+@app.route('/env')
+def env():
+    return "you set " + os.environ.get("test_env")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
