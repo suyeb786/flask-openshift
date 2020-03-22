@@ -18,7 +18,7 @@ def name(name):
 
 @app.route('/env')
 def env():
-    return "you set " + os.environ.get("test_env")
+    return "you set " + environ.get("test_env")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
