@@ -18,7 +18,7 @@ def name(name):
 
 @app.route('/env')
 def env():
-    return environ.get("name")
+    return environ.get("username")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
